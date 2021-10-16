@@ -1,0 +1,36 @@
+<div class="row mt-2">
+    <div class="col-12">
+        <div class="card border-light shadow-sm">
+            <div class="card-body">
+                <h4 class="page-title">Skills Profile</h4>
+                <hr>
+                <table class="my-table">
+                    <thead>
+                        <tr class="text-center">
+                            <th style="text-align: center;" colspan="2"><b>Technical</b></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let skill of technical_skills; index as i; trackBy: trackById">
+                            <td><b>{{skill.key}}</b></td>
+                            <td [innerHTML]="skill.value"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="my-table mt-4">
+                    <thead>
+                        <tr class="text-center">
+                            <th style="text-align: center;" colspan="2"><b>Functional</b></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let skill of functional_skills; index as i; trackBy: trackById">
+                            <td><b>{{skill.key}}</b></td>
+                            <td>{{skill.value}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="row mt-2">
+    <div class="col-12">
+        <div class="card border-light shadow-sm">
+            <div class="card-body">
+                <h4 class="page-title">Professional Summary</h4>
+                <hr>
+                <ul>
+                    <li *ngFor="let summary of summaries; index as i; trackBy: trackById" [innerHTML]="summary.value">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

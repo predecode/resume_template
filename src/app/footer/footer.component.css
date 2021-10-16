@@ -1,0 +1,11 @@
+.link-to-project {
+  color: #262B40;
+  text-decoration: underline;
+}
+
+.footer{
+   background-color: #f1f1f1;
+   text-align: left;
+   padding-left: 10px;
+   border-radius: 10px;
+}

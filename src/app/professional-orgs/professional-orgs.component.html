@@ -1,0 +1,12 @@
+<div class="row mt-2">
+    <div class="col-12">
+        <div class="card border-light shadow-sm">
+            <div class="card-body">
+                <h4 class="page-title">Professional Organisations</h4>
+                <hr>
+                <p *ngFor="let organisation of organisations; index as i; trackBy: trackById"
+                    [innerHTML]="organisation.value"></p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="row mt-2">
+    <div class="col-12">
+        <div class="card border-light shadow-sm">
+            <div class="card-body">
+                <h4 class="page-title">Projects</h4>
+                <hr>
+                <div *ngFor="let company of companies; index as i">
+                    <div class="company-title mb-2">
+                        {{company.title}}
+                    </div>
+                    <div *ngFor="let project of company.projects; index as i; trackBy: trackById">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="page-sub-title">Project {{project.id}}: {{project.name}}</div>
+                                <div class="page-sub-title">{{project.position}}</div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="page-sub-title">{{project.duration}}</div>
+                                <div class="page-sub-title">{{project.companyName}}</div>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <p>
+                                {{project.description}}
+                                <a href={{project.url}} target="_blank" style="color: blue;">{{project.url}}</a>
+                            </p>
+                        </div>
+                        <div>
+                            <span class="page-sub-title">Roles & Responsibilities:</span>
+                            <ul>
+                                <li
+                                    *ngFor="let summary of project.rolesAndResponsiblities; index as i; trackBy: trackById">
+                                    {{summary.value}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mb-2">
+                            <span class="page-sub-title">Environment:</span>
+                            <div>{{project.environment}}</div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

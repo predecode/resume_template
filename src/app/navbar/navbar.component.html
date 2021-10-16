@@ -1,0 +1,142 @@
+<nav class="navbar navbar-dark navbar-theme-primary px-4 col-12 d-md-none">
+  <a data-bs-toggle="collapse" data-bs-target="#sidebarMenu" routerLink="/home" class="nav-link">
+    <img class="user-avatar md-avatar rounded-circle" src="assets/img/team/profile-picture-3.jpg"
+      alt="{{appTitleVersion}}" title="{{appTitleVersion}}" />
+  </a>
+  <span class="fa fa-phone text-success p-2" aria-hidden="true">
+    <a class="link-to-project" href="tel:+91 9535480989" target="_blank">&nbsp;+91
+      9535480989<br /><span class="fa fa-envelope">&nbsp;akroyq@gmail.com</span></a>
+  </span>
+  <a class="link-to-project" (click)="downloadResume()" target="_blank">
+    <span class="fa fa-download text-success" aria-hidden="true">
+    </span>
+  </a>
+  <div class="d-flex align-items-center">
+    <button class="navbar-toggler d-md-none collapsed" type="button" data-bs-toggle="collapse"
+      data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+
+<nav id="sidebarMenu" class="sidebar d-md-block bg-dark text-white collapse" data-simplebar>
+  <div class="sidebar-inner px-4 pt-3">
+    <div class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
+      <div class="d-flex align-items-center">
+        <div class="user-avatar lg-avatar me-4">
+          <img src="assets/img/team/profile-picture-3.jpg" class="card-img-top rounded-circle border-white"
+            alt="{{authorName}}" title="{{authorName}}" />
+        </div>
+        <div class="d-block">
+          <h2 class="h6">{{authorName}}</h2>
+        </div>
+      </div>
+      <div class="collapse-close d-md-none">
+        <a href="#sidebarMenu" class="fas fa-times" data-bs-toggle="collapse" data-bs-target="#sidebarMenu"
+          aria-controls="sidebarMenu" aria-expanded="true" aria-label="Toggle navigation"></a>
+      </div>
+    </div>
+    <ul class="nav flex-column pt-3 pt-md-0">
+
+      <li class="nav-item" routerLinkActive="active">
+        <a data-bs-toggle="collapse" data-bs-target="#sidebarMenu" routerLink="/home" class="nav-link">
+          <span class="sidebar-icon"><span class="fas fa-home"></span></span>
+          <span class="sidebar-text">{{ 'menu.home' | translate }}</span>
+        </a>
+      </li>
+
+      <li class="nav-item" routerLinkActive="active">
+        <a data-bs-toggle="collapse" data-bs-target="#sidebarMenu" routerLink="/professional-summary" class="nav-link">
+          <span class="sidebar-icon"><span class="fas fa-home"></span></span>
+          <span class="sidebar-text">{{ 'menu.professional-summary' | translate }}</span>
+        </a>
+      </li>
+
+      <li class="nav-item" routerLinkActive="active">
+        <a data-bs-toggle="collapse" data-bs-target="#sidebarMenu" routerLink="/skills" class="nav-link">
+          <span class="sidebar-icon"><span class="fa fa-suitcase"></span></span>
+          <span class="sidebar-text">{{ 'menu.skills' | translate }}</span>
+        </a>
+      </li>
+
+      <li class="nav-item" routerLinkActive="active">
+        <a data-bs-toggle="collapse" data-bs-target="#sidebarMenu" routerLink="/projects" class="nav-link">
+          <span class="sidebar-icon"><span class="fa fa-tasks"></span></span>
+          <span class="sidebar-text">{{ 'menu.projects' | translate }}</span>
+        </a>
+      </li>
+
+      <li class="nav-item" routerLinkActive="active">
+        <a data-bs-toggle="collapse" data-bs-target="#sidebarMenu" routerLink="/education" class="nav-link">
+          <span class="sidebar-icon"><span class="fas fa-graduation-cap"></span></span>
+          <span class="sidebar-text">{{ 'menu.education' | translate }}</span>
+        </a>
+      </li>
+
+      <li class="nav-item" routerLinkActive="active">
+        <a data-bs-toggle="collapse" data-bs-target="#sidebarMenu" routerLink="/professional-orgs" class="nav-link">
+          <span class="sidebar-icon"><span class="fas fa-home"></span></span>
+          <span class="sidebar-text">{{ 'menu.professional-orgs' | translate }}</span>
+        </a>
+      </li>
+
+      <!-- <li class="nav-item" routerLinkActive="active">
+        <a data-bs-toggle="collapse" data-bs-target="#sidebarMenu" routerLink="/certifs" class="nav-link">
+          <span class="sidebar-icon"><span class="fas fa-check-circle"></span></span>
+          <span class="sidebar-text">{{ 'menu.certifications' | translate }}</span>
+        </a>
+      </li> -->
+
+      <li class="nav-item" routerLinkActive="active">
+        <a data-bs-toggle="collapse" data-bs-target="#sidebarMenu" routerLink="/achievements" class="nav-link">
+          <span class="sidebar-icon"><span class="fas fa-award"></span></span>
+          <span class="sidebar-text">{{ 'menu.achievements' | translate }}</span>
+        </a>
+      </li>
+
+      <li role="separator" class="dropdown-divider mt-4 mb-3 border-black"></li>
+    </ul>
+  </div>
+</nav>
+<div [style.display]="isHidden ? 'block' : 'none'">
+  <nav class="navbar navbar-top navbar-expand navbar-dashboard navbar-dark ps-0 pe-2 mb-2 bg-color">
+    <div class="container-fluid px-0">
+      <div class="d-flex justify-content-between w-100" id="navbarSupportedContent">
+        <div class="d-flex align-items-center"></div>
+        <!-- Navbar links -->
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item pe-4">
+            <div class="media d-flex align-items-center">
+              <span class="fa fa-envelope text-success" aria-hidden="true"></span> &nbsp;
+              <a class="link-to-project" href="mailto:akroyq@gmail.com" target="_blank">akroyq@gmail.com</a>
+            </div>
+          </li>
+          <li class="nav-item pe-4">
+            <div class="media d-flex align-items-center">
+              <span class="fa fa-phone text-success" aria-hidden="true"></span>
+              <a class="link-to-project" href="tel:+91 9535480989" target="_blank">
+                +91 9535480989
+              </a>
+            </div>
+          </li>
+          <li class="nav-item pe-4">
+            <div class="media d-flex align-items-center">
+              <button (click)="downloadResume()">
+                <i class="fa fa-download" aria-hidden="true">Download</i>
+              </button>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="media d-flex align-items-center">
+              <img class="user-avatar md-avatar rounded-circle" alt="Image placeholder"
+                src="assets/img/team/profile-picture-3.jpg" />
+              <div class="media-body ms-2 text-dark align-items-center d-none d-lg-block">
+                <span class="mb-0 font-small fw-bold">Amit Roy</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
